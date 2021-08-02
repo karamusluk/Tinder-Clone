@@ -1,18 +1,19 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Button } from "react-native";
 
 import TinderCard from "../components/TinderCard";
 import AnimatedStack from "../components/AnimatedStack";
 
 import users from "../../assets/data/users";
 
-export default Home = () => {
+export default Home = ({ navigation }) => {
   const onSwipeLeft = (user) => {
     console.warn("swipe left", user.name);
   };
   const onSwipeRight = (user) => {
     console.warn("swipe right", user.name);
   };
+
   return (
     <View style={styles.container}>
       <AnimatedStack

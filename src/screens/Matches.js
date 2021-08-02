@@ -6,11 +6,12 @@ import {
   SafeAreaView,
   ScrollView,
   Image,
+  Button,
 } from "react-native";
 
 import users from "../../assets/data/users";
 
-const Matches = () => {
+const Matches = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.root}>
       <View style={styles.container}>
@@ -37,7 +38,6 @@ const Matches = () => {
             })}
         </View>
       </ScrollView>
-      <View></View>
     </SafeAreaView>
   );
 };
@@ -48,8 +48,7 @@ const styles = StyleSheet.create({
   root: {
     width: "100%",
     flex: 1,
-    padding: 10,
-    margin: 10,
+    padding: 15,
   },
   container: {
     padding: 10,
